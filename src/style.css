@@ -1,0 +1,511 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+  body {
+    min-width: 550px;
+    background: linear-gradient(90deg, #434243 30%, #b3b3b3 100%); 
+  }
+  
+  a {
+    text-decoration: none;
+  }
+
+  .button {
+    background-color: #000;
+    border: 0;
+    color: #fff;
+    width: 200px;
+    height: 40px;
+    font-family: "open-sans-bold";
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  button:hover {
+    background-color: #068943;
+    color: #fff;
+    transition: all 0.3s;
+    cursor: pointer;
+  }
+
+  @font-face {
+    font-family: "open-sans-regular";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/OpenSans-Regular.ttf") format("ttf"),
+      url("../fonts/OpenSans-Regular.woff") format("woff"),
+      url("../fonts/OpenSans-Regular.woff2") format("woff2");
+  }
+  
+  @font-face {
+    font-family: "open-sans-bold";
+    font-style: bold;
+    font-weight: 400;
+    src: url("../fonts/OpenSans-Bold.ttf") format("ttf"),
+      url("../fonts/OpenSans-Bold.woff") format("woff"),
+      url("../fonts/OpenSans-Bold.woff2") format("woff2");
+  }
+
+/* блок 1 */
+
+.fullscreen-bg {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    padding-top:45%;
+}
+ 
+.fullscreen-bg__video {
+    /* display: none; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-position: top;
+}
+.overlay {
+    background: rgba(0,0,0,0.6);
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.overlay h1 {
+    font-family: "open-sans-bold";
+    text-align: center;
+    color:#fff;
+    font-size: 30px;
+    margin-top: 5%;
+}
+
+.promo_content {
+    display: flex;
+    font-family: "open-sans-regular", sans-serif;
+    font-size: 20px;
+    color: #fff;
+    margin: 5% 20px;
+}
+
+.promo_img {
+    display: flex;
+    width: 200px;
+    height: 200px;
+    margin: 5%;
+}
+
+.promo_items {
+    margin: auto;
+}
+
+
+/* блок 2 */
+
+.content {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    max-width: 90%;
+}
+
+.content .compose-center-block {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 12px;
+}
+
+.ingredient-column {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.ingredient {
+    position: relative;
+    display: block;
+    border-radius: 40%;
+    padding: 12px;
+    width: 220px;
+    height: 220px;
+    margin: 12px;
+
+    background-color: #fff;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.ingredient .ingredient-title {
+    font-size: 20px;
+    align-self: flex-end;
+    color: #fff;
+    backdrop-filter: blur(10px);
+}
+
+/* блок 3 */
+
+.slider {
+    width: 300px;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+  
+.slides {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+
+}
+
+.slides::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+.slides::-webkit-scrollbar-thumb {
+    background: black;
+    border-radius: 10px;
+}
+
+.slides::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.slides > div {
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    width: 300px;
+    height: 400px;
+    margin-right: 50px;
+    border-radius: 10px;
+    background: #c1bdbd;
+    font-family: "open-sans-regular", sans-serif;
+    padding: 20px;
+    transform-origin: center center;
+    transform: scale(1);
+    transition: transform 0.5s;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+
+.author-info {
+    background: rgba(0, 0, 0, 0.75);
+    color: #c1bdbd;
+    padding: 0.75rem;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    margin: 0;
+}
+
+.author-info a {
+    color: #fff;
+    font-family: "open-sans-regular", sans-serif;
+}
+
+
+.slider > a {
+    display: inline-flex;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: #fff;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 0 0.5rem 0;
+    position: relative;
+}
+
+.slider > a:active {
+    top: 1px;
+} 
+
+.reviews_name {
+    font-family: "open-sans-bold", sans-serif;
+}
+
+.reviews_text {
+    font-family: "open-sans-regular", sans-serif;
+}
+
+.reviews_img {
+    width: 200px;
+    border-radius: 40%;
+}
+
+
+/* блок 4 */
+.advantages_wrapper {
+    display: flex;
+    font-family: "open-sans-regular", sans-serif;
+    font-size: 20px;
+    margin: 0 auto;
+}
+
+.advantages_text {
+    background-color: #c1bdbd;
+    border-radius: 10px;
+    padding: 30px;
+    margin-right: 10px;
+    align-content: center;
+}
+
+.advantages_img {
+    width: 300px;
+    margin: auto 10px;
+}
+
+.advantages_text ul{
+    margin: 0;
+    padding: 4px;
+}
+
+.advantages_title {
+    font-family: "open-sans-bold", sans-serif;
+    display: inline;
+    flex-wrap: wrap;
+    margin-right: 10px;
+}
+
+/* блок 5 */
+.timer-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    font-family: "open-sans-regular", sans-serif;
+    font-size: 20px;
+}
+
+.timer {
+    display: flex;
+    font-family: "open-sans-regular", sans-serif;
+    font-size: 100px;
+    justify-content: center;
+}
+
+.contacts_title {
+    font-family: "open-sans-bold", sans-serif;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.contacts_wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.contacts_img {
+    width: 200px;
+    margin: 10px 20px;
+}
+
+.contacts_form {
+    width: 50%;
+    background-color: #c1bdbd;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 30px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts_form-wrapper {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.name {
+    font-family: "open-sans-regular", sans-serif;
+    width: 400px;
+    height: 47px;
+    background-color: #f4f7f6;
+    border: 0;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
+.number {
+    font-family: "open-sans-regular", sans-serif;
+    width: 400px;
+    height: 47px;
+    background-color: #f4f7f6;
+    border: 0;
+    padding-left: 15px;
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.name:focus, .number:focus {
+    outline: none;
+    border: 3px solid #7b2a64;
+}
+
+.contacts_price {
+    margin: 10px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+}
+
+.old-price {
+    margin-top: 4px;
+    padding: 10px;
+    background: #c31919;
+    width: 150px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.new-price {
+    font-size: 20px;
+    text-align: center;
+    background: #068943;
+    color: #fff;
+    padding: 1rem;
+    overflow: hidden;
+    position: relative;
+    word-wrap: break-word; 
+    width: 240px;
+
+    -webkit-animation: pulsing 3s infinite;
+     animation: pulsing 3s infinite;
+}
+@-webkit-keyframes pulsing {
+    0% {
+      -webkit-transform: scale(0.8, 0.8);
+      transform: scale(0.8, 0.8)
+    }
+    50% {
+      -webkit-transform: scale(1.0, 1.0);
+      transform: scale(1.0, 1.0);
+    }
+    100% {
+      -webkit-transform: scale(0.8, 0.8);
+      transform: scale(0.8, 0.8);
+    }
+  }
+  
+  @keyframes pulsing {
+    0% {
+      -webkit-transform: scale(0.8, 0.8);
+      transform: scale(0.8, 0.8)
+    }
+    50% {
+      -webkit-transform: scale(1.0, 1.0);
+      transform: scale(1.0, 1.0);
+    }
+    100% {
+      -webkit-transform: scale(0.8, 0.8);
+      transform: scale(0.8, 0.8);
+    }
+  }
+
+
+
+/* -------------------------------------- */
+
+@media (max-width: 856px) {
+    
+    .overlay h1 {
+        font-size: 17px;
+        margin-top: 10px;
+    }
+    
+    .promo_content {
+        font-size: 14px;
+    }
+    
+    .promo_img {
+        width: 100px;
+        height: 100px;
+
+    }
+
+    .block .content {
+        padding: 20px;
+    }
+
+    .content {
+        flex-flow: column nowrap;
+        max-width: 100%;
+    }
+
+    .ingredient-column {
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    .ingredient {
+        width: 150px;
+        height: 150px;
+        margin: 0px;
+    }
+
+    .ingredient-title {
+        font-size: 12px;
+    }
+
+    .img-center-block {
+        width: 150px;
+        height: auto;
+
+    }
+
+    .advantages_text {
+        font-size: 14px;
+    }
+    
+    .advantages_img {
+        width: 200px;
+    }
+
+    .advantages_title {
+        display: flex;
+        width: 145px;
+    }
+
+    .timer_items {
+        font-size: 20px;
+    }
+
+    .name {
+        width: 223px;
+    }
+    
+    .number {
+        width: 223px;
+    }
+  
+}
