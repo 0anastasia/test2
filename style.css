@@ -19,7 +19,7 @@
     color: #fff;
     width: 200px;
     height: 40px;
-    font-family: "open-sans-bold";
+    font-family: "open-sans-bold", sans-serif;
     padding: 10px;
     margin: 10px;
   }
@@ -35,18 +35,18 @@
     font-family: "open-sans-regular";
     font-style: normal;
     font-weight: 400;
-    src: url("../fonts/OpenSans-Regular.ttf") format("ttf"),
-      url("../fonts/OpenSans-Regular.woff") format("woff"),
-      url("../fonts/OpenSans-Regular.woff2") format("woff2");
+    src: url("fonts/OpenSans-Regular.ttf") format("ttf"),
+      url("fonts/OpenSans-Regular.woff") format("woff"),
+      url("fonts/OpenSans-Regular.woff2") format("woff2");
   }
   
   @font-face {
     font-family: "open-sans-bold";
     font-style: bold;
     font-weight: 400;
-    src: url("../fonts/OpenSans-Bold.ttf") format("ttf"),
-      url("../fonts/OpenSans-Bold.woff") format("woff"),
-      url("../fonts/OpenSans-Bold.woff2") format("woff2");
+    src: url("fonts/OpenSans-Bold.ttf") format("ttf"),
+      url("fonts/OpenSans-Bold.woff") format("woff"),
+      url("fonts/OpenSans-Bold.woff2") format("woff2");
   }
 
 /* блок 1 */
@@ -78,11 +78,11 @@
 }
 
 .overlay h1 {
-    font-family: "open-sans-bold";
+    font-family: "open-sans-bold", sans-serif;
     text-align: center;
     color:#fff;
     font-size: 30px;
-    margin-top: 5%;
+    margin-top: 10px;
 }
 
 .promo_content {
@@ -117,6 +117,7 @@
 .content .compose-center-block {
     display: flex;
     align-self: center;
+    font-family: "open-sans-regular", sans-serif;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -152,7 +153,8 @@
 }
 
 .ingredient .ingredient-title {
-    font-size: 20px;
+    font-family: "open-sans-regular", sans-serif;
+    font-size: 18px;
     align-self: flex-end;
     color: #fff;
     backdrop-filter: blur(10px);
